@@ -6,7 +6,7 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 15:38:20 by djin              #+#    #+#             */
-/*   Updated: 2023/05/06 22:17:44 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/06 23:34:31 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 # define LIBFT_H
 
 # include <unistd.h>
-# include <stdio.h>
+# include <string.h>
 # include <stdlib.h>
+# include <stdio.h>
 
 typedef struct s_list
 {
@@ -67,7 +68,7 @@ void		ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 char		*ft_strjoin(char const *s1, char const *s2);
 
-size_t			ft_strlcat(char *dest, const char *src, size_t size);
+size_t		ft_strlcat(char *dest, const char *src, size_t size);
 
 int			ft_strlcpy(char *dest, const char *src, unsigned int size);
 
