@@ -6,7 +6,7 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 15:45:43 by djin              #+#    #+#             */
-/*   Updated: 2023/04/30 16:58:49 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/08 14:57:30 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memchr(void *ptr, int ch, size_t count)
 		return (NULL);
 	while (i < count)
 	{
-		if (char_ptr[i] == ch)
+		if (char_ptr[i] == (char)ch)
 			return ((void *)ptr + i);
 		i++;
 	}

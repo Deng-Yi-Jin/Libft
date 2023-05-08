@@ -6,7 +6,7 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 12:53:00 by djin              #+#    #+#             */
-/*   Updated: 2023/05/08 12:58:30 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/08 15:13:14 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strrchr(const char *str, int c)
 	mark = 0;
 	while (str[i])
 	{
-		if (str[i] == c)
+		if (str[i] == (char)c)
 		{
 			j = i;
 			mark = 1;

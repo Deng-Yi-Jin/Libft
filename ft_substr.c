@@ -6,7 +6,7 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 22:00:09 by djin              #+#    #+#             */
-/*   Updated: 2023/05/01 12:30:11 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/08 19:02:12 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,14 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned int	i;
-	unsigned int	j;
-	char			*str;
+	size_t	i;
+	size_t	j;
+	char	*str;
 
+	if (!s)
+		return (NULL);
+	if (ft_strlen(s) < len)
+		len = ft_strlen(s);
 	str = malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
@@ -36,7 +40,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (str);
 }
 
-/*int	main(void)
-{
-	printf("%s", ft_substr("Hello There", 2, 5));
-}*/
+// #include "string.h"
+
+// int	main(void)
+// {
+// 	printf("%s", ft_substr("Hello There", 2, 5));
+// }

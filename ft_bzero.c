@@ -6,7 +6,7 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 20:41:30 by djin              #+#    #+#             */
-/*   Updated: 2023/05/08 13:13:03 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/08 14:25:08 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	ft_bzero(void *s, size_t n)
 	size_t	i;
 	char	*str;
 
-	*str = (*(char *)s);
 	if (!s)
 		return ;
+	str = (char *)s;
 	i = 0;
 	while (i < n)
 	{

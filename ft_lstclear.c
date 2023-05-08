@@ -6,7 +6,7 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 11:22:26 by djin              #+#    #+#             */
-/*   Updated: 2023/05/08 13:10:05 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/08 18:59:00 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,16 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*newnode;
 	t_list	*prevnode;
 
-	prevnode = *lst;
-	while (*lst || lst)
+	if (!lst || !del)
+		return ;
+	prevnode = 0;
+	newnode = *lst;
+	while (newnode != 0)
 	{
-		newnode = (*lst)->next;
-		if (!prevnode)
-			return ;
-		else if (prevnode)
-		{
-			del(prevnode -> content);
-			free (prevnode);
-		}
-		*lst = newnode;
+		prevnode = newnode;
+		newnode = newnode -> next;
+		del(prevnode -> content);
+		free(prevnode);
 	}
+	*lst = newnode;
 }

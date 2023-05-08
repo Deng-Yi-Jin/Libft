@@ -6,7 +6,7 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 17:03:59 by djin              #+#    #+#             */
-/*   Updated: 2023/04/30 11:19:26 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/08 19:00:59 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int	ft_strlcpy(char *dest, const char *src, unsigned int size)
 {
 	unsigned int	i;
 
+	if (!size)
+		return (ft_strlen(src));
 	i = 0;
 	if (size > 0)
 	{
@@ -31,11 +33,12 @@ int	ft_strlcpy(char *dest, const char *src, unsigned int size)
 	return (i);
 }
 
-/*int	main(void)
-{
-	char	dst[] = "Hell0";
-	char	src[5];
-	unsigned int size = 3;
+// int	main(void)
+// {
+// 	char	dst[] = "Hell0";
+// 	char	src[5];
+// 	unsigned int size = 10;
 
-	printf("%d", ft_strlcpy(src, dst, size));
-}*/
+// 	printf("%d\n", ft_strlcpy(src, dst, size));
+// 	printf("%s", src);
+// }

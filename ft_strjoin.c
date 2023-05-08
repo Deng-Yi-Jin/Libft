@@ -6,7 +6,7 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 12:04:22 by djin              #+#    #+#             */
-/*   Updated: 2023/05/01 14:26:26 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/08 14:21:17 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (str);
 }
 
-int	main(void)
-{
-	printf("%s\n", ft_strjoin("Hello", " There"));
-}
+// int	main(void)
+// {
+// 	printf("%s\n", ft_strjoin("Hello", " There"));
+// }

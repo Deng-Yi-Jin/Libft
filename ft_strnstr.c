@@ -6,7 +6,7 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 17:23:57 by djin              #+#    #+#             */
-/*   Updated: 2023/04/30 21:58:29 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/08 19:01:20 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,15 @@
 
 char	*ft_strnstr(const char	*str, const char *to_find, size_t len)
 {
-	unsigned int	i;
-	unsigned int	o;
+	size_t	i;
+	size_t	o;
 
+	if (!len && !str)
+		return (NULL);
 	i = 0;
-	while (str[i] != '\0' && i < len)
+	if (!to_find[i])
+		return ((char *)str + i);
+	while (str[i] && (i < len))
 	{
 		o = 0;
 		while (to_find[o])

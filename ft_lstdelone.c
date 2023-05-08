@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_delone.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/28 18:54:21 by djin              #+#    #+#             */
-/*   Updated: 2023/05/08 16:25:53 by djin             ###   ########.fr       */
+/*   Created: 2023/05/08 11:16:44 by djin              #+#    #+#             */
+/*   Updated: 2023/05/08 12:45:32 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	int	i;
+	t_list	*prevnode;
 
-	i = 0;
-	while (str[i] != '\0')
+	prevnode = lst;
+	if (!prevnode)
+		return ;
+	else if (prevnode)
 	{
-		i++;
+		del(prevnode -> content);
+		free (prevnode);
 	}
-	return (i);
 }
-
-/*int	main(void)
-{
-	char	str[] = "Hello World";
-	
-	printf("%d", ft_strlen(str));
-}*/
