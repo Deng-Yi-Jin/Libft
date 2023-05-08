@@ -6,20 +6,20 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 10:19:49 by djin              #+#    #+#             */
-/*   Updated: 2023/05/08 23:12:58 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/09 01:26:21 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static bool	check_seperator(char str, char c)
+static int	check_seperator(char check, char b)
 {
-	if (str == c)
-		return (true);
-	return (false);
+	if (check == b)
+		return (1);
+	return (0);
 }
 
-static int	count_strings(char *str, char c)
+static int	count_string(char *str, char c)
 {
 	int	count;
 
@@ -46,15 +46,15 @@ static int	ft_len(char *str, char c)
 	return (i);
 }
 
-static char	*print_words(char *str, char c)
+static char	*print_word(char *str, char c)
 {
-	int	i;
-	int	len;
+	int		i;
+	int		len;
 	char	*word;
 
 	i = 0;
 	len = ft_len(str, c);
-	word = (char *)malloc((len + 1) * 1);
+	word = (char *)malloc((len + 1) * sizeof(char));
 	while (i < len)
 	{
 		word[i] = str[i];
@@ -66,22 +66,22 @@ static char	*print_words(char *str, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	int	i;
 	char	*str;
 	char	**arr;
+	int		i;
 
 	if (!s)
 		return (NULL);
 	i = 0;
 	str = (char *)s;
-	arr = (char **)malloc((count_strings(str, c) + 1) * sizeof(void *));
+	arr = (char **)malloc((count_string(str, c) + 1) * sizeof(char *));
 	while (*str)
 	{
-		while(*str && check_seperator(*str, c))
+		while (*str && check_seperator(*str, c))
 			str++;
 		if (*str)
 		{
-			arr[i] = print_words(str, c);
+			arr[i] = print_word(str, c);
 			i++;
 		}
 		while (*str && !check_seperator(*str, c))
@@ -91,7 +91,7 @@ char	**ft_split(char const *s, char c)
 	return (arr);
 }
 
-#include <stdio.h>
+//# include <stdio.h>
 
 // int	main(void)
 //  {

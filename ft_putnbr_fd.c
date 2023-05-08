@@ -6,7 +6,7 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 20:20:17 by djin              #+#    #+#             */
-/*   Updated: 2023/05/08 23:45:53 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/09 00:49:24 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ static void	ft_putnumber(long n, char *buffer)
 
 static void	ft_reverse_print(char *str, char *buffer)
 {
-	int	length;
-	long i;
+	int		length;
+	long	i;
 
 	length = ft_strlen(buffer);
 	i = 0;
