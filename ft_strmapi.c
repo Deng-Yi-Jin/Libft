@@ -6,7 +6,7 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 22:15:09 by djin              #+#    #+#             */
-/*   Updated: 2023/05/08 12:58:19 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/08 19:25:59 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,16 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (str);
 }
 
-char	any(unsigned int i, char c)
-{
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	else if (c >= 'A' && c <= 'Z')
-		return (c + 32);
-	return (c);
-}
+// char	any(unsigned int i, char c)
+// {
+// 	if (c >= 'a' && c <= 'z')
+// 		return (c - 32);
+// 	else if (c >= 'A' && c <= 'Z')
+// 		return (c + 32);
+// 	return (c);
+// }
 
-int	main(void)
-{
-	printf("%s", ft_strmapi("Hello", &any));
-}
+// int	main(void)
+// {
+// 	printf("%s", ft_strmapi("Hello", &any));
+// }

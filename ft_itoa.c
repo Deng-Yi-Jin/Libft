@@ -6,13 +6,13 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 18:57:15 by djin              #+#    #+#             */
-/*   Updated: 2023/05/08 12:47:33 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/08 21:12:28 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnumber(char *buffer, long n)
+static void	ft_putnumber(char *buffer, long n)
 {
 	int		i;
 	long	temp;
@@ -33,7 +33,7 @@ void	ft_putnumber(char *buffer, long n)
 	buffer[i] = '\0';
 }
 
-void	ft_reverseprint(char *result, char *buffer)
+static void	ft_reverseprint(char *result, char *buffer)
 {
 	int	length;
 	int	i;

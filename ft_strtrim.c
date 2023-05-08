@@ -6,47 +6,26 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 12:34:44 by djin              #+#    #+#             */
-/*   Updated: 2023/05/03 18:03:55 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/08 20:34:58 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_chr_in_set(char const str, char const *set)
-{
-	size_t	i;
-
-	i = 0;
-	while (set[i])
-	{
-		if (set[i] == str)
-			return (1);
-		i++;
-	}
-	return (0);
-}
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	first;
-	size_t	last;
 	size_t	i;
-	char	*str;
+	size_t	length;
 
-	first = 0;
+	length = ft_strlen(s1);
 	i = 0;
-	last = ft_strlen(s1);
-	str = malloc(sizeof(char) * (last - first + 1));
-	while (s1[first] && ft_chr_in_set(s1[first], set))
-		first++;
-	while ((last > first) && ft_chr_in_set(s1[last - 1], set))
-		last--;
-	if (!str)
+	if (!set || !s1)
 		return (NULL);
-	while (last > first)
-		str[i++] = s1[first++];
-	str[i] = 0;
-	return (str);
+	while (s1[i] && ft_strchr(set, s1[i]))
+		i++;
+	while (s1[length - 1] && ft_strchr(set, s1[length - 1]))
+		length--;
+	return (ft_substr(s1 + i, 0, length - i));
 }
 
 /*int	main(void)

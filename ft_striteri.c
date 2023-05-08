@@ -6,7 +6,7 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 22:39:48 by djin              #+#    #+#             */
-/*   Updated: 2023/05/08 12:57:25 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/08 19:26:21 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,17 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	}
 }
 
-void	any(unsigned int i, char *c)
-{
-	if (*c >= 'a' && *c <= 'z')
-		*c = *c - 32;
-	else if (*c >= 'A' && *c <= 'Z')
-		*c = *c + 32;
-}
-
-// int	main(void)
+// void	any(unsigned int i, char *c)
 // {
-// 	char str[] = "Hello";
-// 	ft_striteri(str, &any);
-// 	printf("%s", str);
+// 	if (*c >= 'a' && *c <= 'z')
+// 		*c = *c - 32;
+// 	else if (*c >= 'A' && *c <= 'Z')
+// 		*c = *c + 32;
 // }
+
+// // int	main(void)
+// // {
+// // 	char str[] = "Hello";
+// // 	ft_striteri(str, &any);
+// // 	printf("%s", str);
+// // }

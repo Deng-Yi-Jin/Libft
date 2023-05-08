@@ -6,13 +6,13 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 10:19:49 by djin              #+#    #+#             */
-/*   Updated: 2023/05/08 12:56:50 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/08 21:11:52 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_count_words(char const *s, char c, int *count)
+static void	ft_count_words(char const *s, char c, int *count)
 {
 	int	i;
 	int	j;
@@ -39,7 +39,7 @@ void	ft_count_words(char const *s, char c, int *count)
 	}
 }
 
-void	ft_strbuffer(int *j, int *index, char **mstr, char *buffer)
+static void	ft_strbuffer(int *j, int *index, char **mstr, char *buffer)
 {
 	if (*j > 0)
 	{
@@ -50,7 +50,7 @@ void	ft_strbuffer(int *j, int *index, char **mstr, char *buffer)
 	}
 }
 
-void	ft_place_word(char const *s, char c, char **mstr, int *index)
+static void	ft_place_word(char const *s, char c, char **mstr, int *index)
 {
 	int		i;
 	int		j;

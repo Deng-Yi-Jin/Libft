@@ -6,13 +6,13 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 11:32:12 by djin              #+#    #+#             */
-/*   Updated: 2023/05/08 18:59:57 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/08 21:16:04 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_if(t_list **temp, t_list *newnode, t_list **head)
+static void	ft_if(t_list **temp, t_list *newnode, t_list **head)
 {
 	if (*head == 0)
 	{
