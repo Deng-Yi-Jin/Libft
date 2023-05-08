@@ -6,7 +6,7 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 20:20:17 by djin              #+#    #+#             */
-/*   Updated: 2023/05/08 21:13:39 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/08 23:45:53 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ static void	ft_putnumber(long n, char *buffer)
 		n *= -1;
 	while (n)
 	{
-		buffer[i++] = n % 10 + '0';
+		buffer[i] = n % 10 + '0';
+		i++;
 		n /= 10;
 	}
 	if (temp < 0)
@@ -33,32 +34,41 @@ static void	ft_putnumber(long n, char *buffer)
 	buffer[i] = '\0';
 }
 
-static void	ft_reverse_print(char *str, char *buffer, long i)
+static void	ft_reverse_print(char *str, char *buffer)
 {
 	int	length;
+	long i;
 
 	length = ft_strlen(buffer);
+	i = 0;
 	while (length--)
 		str[i++] = buffer[length];
+	str[i] = '\0';
 }
 
-void	ft_putnbr_fd(int n, int fd)
+static void	ft_print_fd(int fd, char *str)
 {
-	char	buffer[12];
-	char	str[12];
-	int		i;
+	int	i;
 
 	i = 0;
-	ft_putnumber(n, buffer);
-	ft_reverse_print(str, buffer, i);
 	while (str[i])
 	{
 		write(fd, &str[i], 1);
 		i++;
-	}
+	}	
+}
+
+void	ft_putnbr_fd(int n, int fd)
+{
+	char	buffer[46985];
+	char	str[46985];
+
+	ft_putnumber(n, buffer);
+	ft_reverse_print(str, buffer);
+	ft_print_fd(fd, str);
 }
 
 // int	main(void)
 // {
-// 	ft_putnbr_fd(2147483647, 1);
+// 	ft_putnbr_fd(0, 1);
 // }

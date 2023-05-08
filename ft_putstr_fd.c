@@ -6,7 +6,7 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 19:59:02 by djin              #+#    #+#             */
-/*   Updated: 2023/05/08 13:15:11 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/08 23:21:36 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		write(fd, &s[i], 1);
-		i++;
-	}
-	s[i] = '\0';
+	if(!s)
+		return ;
+	write (fd, s, ft_strlen(s));
 }

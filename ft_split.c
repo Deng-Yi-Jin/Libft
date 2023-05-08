@@ -6,89 +6,92 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 10:19:49 by djin              #+#    #+#             */
-/*   Updated: 2023/05/08 21:11:52 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/08 23:12:58 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_count_words(char const *s, char c, int *count)
+static bool	check_seperator(char str, char c)
+{
+	if (str == c)
+		return (true);
+	return (false);
+}
+
+static int	count_strings(char *str, char c)
+{
+	int	count;
+
+	count = 0;
+	while (*str)
+	{
+		while (*str && check_seperator(*str, c))
+			str++;
+		if (*str)
+			count++;
+		while (*str && !check_seperator(*str, c))
+			str++;
+	}
+	return (count);
+}
+
+static int	ft_len(char *str, char c)
 {
 	int	i;
-	int	j;
-
-	*count = 0;
-	i = 0;
-	while (s[i])
-	{
-		while (s[i])
-		{
-			if (s[i] != c)
-				break ;
-			i++;
-		}
-		j = 0;
-		while (s[i])
-		{
-			if (c == s[i])
-				break ;
-			i++;
-		}
-		if (i > j)
-			(*count)++;
-	}
-}
-
-static void	ft_strbuffer(int *j, int *index, char **mstr, char *buffer)
-{
-	if (*j > 0)
-	{
-		buffer[*j] = '\0';
-		mstr[*index] = malloc(sizeof(char) * (*j + 1));
-		ft_strlcpy(mstr[*index], buffer, (*j + 1));
-		(*index)++;
-	}
-}
-
-static void	ft_place_word(char const *s, char c, char **mstr, int *index)
-{
-	int		i;
-	int		j;
-	char	buffer[8758];
 
 	i = 0;
-	while (s[i])
+	while (str[i] && !check_seperator(str[i], c))
+		i++;
+	return (i);
+}
+
+static char	*print_words(char *str, char c)
+{
+	int	i;
+	int	len;
+	char	*word;
+
+	i = 0;
+	len = ft_len(str, c);
+	word = (char *)malloc((len + 1) * 1);
+	while (i < len)
 	{
-		while (s[i])
-		{
-			if (s[i] != c)
-				break ;
-			(i)++;
-		}
-		j = 0;
-		while (s[i])
-		{
-			if (s[i] == c)
-				break ;
-			buffer[j++] = s[i++];
-		}
-		ft_strbuffer(&j, index, mstr, buffer);
+		word[i] = str[i];
+		i++;
 	}
+	word[i] = '\0';
+	return (word);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	int		count;
-	int		index;
-	char	**mstr;
+	int	i;
+	char	*str;
+	char	**arr;
 
-	count = 0;
-	ft_count_words(s, c, &count);
-	mstr = malloc(sizeof(char *) * count);
-	index = 0;
-	ft_place_word(s, c, mstr, &index);
-	return (mstr);
+	if (!s)
+		return (NULL);
+	i = 0;
+	str = (char *)s;
+	arr = (char **)malloc((count_strings(str, c) + 1) * sizeof(void *));
+	while (*str)
+	{
+		while(*str && check_seperator(*str, c))
+			str++;
+		if (*str)
+		{
+			arr[i] = print_words(str, c);
+			i++;
+		}
+		while (*str && !check_seperator(*str, c))
+			str++;
+	}
+	arr[i] = 0;
+	return (arr);
 }
+
+#include <stdio.h>
 
 // int	main(void)
 //  {

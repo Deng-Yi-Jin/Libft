@@ -6,7 +6,7 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 20:09:43 by djin              #+#    #+#             */
-/*   Updated: 2023/05/08 12:56:17 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/08 23:28:17 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,8 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int	i;
+	const char	endl = '\n';
 
-	i = 0;
-	if (!s)
-		return ;
-	while (s[i])
-	{
-		write(fd, &s[i], 1);
-		i++;
-	}
-	s[i] = '\0';
-	write(fd, "\0", 1);
+	write(fd, s, ft_strlen(s));
+	write(fd, &endl, 1);
 }

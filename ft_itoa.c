@@ -6,7 +6,7 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 18:57:15 by djin              #+#    #+#             */
-/*   Updated: 2023/05/08 21:12:28 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/08 23:25:54 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,10 @@ char	*ft_itoa(int n)
 
 	ft_putnumber(buffer, n);
 	result = malloc(sizeof(char) * (ft_strlen(buffer) + 1));
+	if (!result)
+		return (NULL);
 	ft_reverseprint(result, buffer);
-	printf("%s", result);
-	return (NULL);
+	return (result);
 }
 
 // int	main(void)
