@@ -6,20 +6,19 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 18:57:15 by djin              #+#    #+#             */
-/*   Updated: 2023/05/05 22:14:37 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/08 12:47:33 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnumber(char *buffer, long	n)
+void	ft_putnumber(char *buffer, long n)
 {
 	int		i;
 	long	temp;
 
 	temp = n;
 	i = 0;
-	
 	if (n == 0)
 		buffer[i++] = '0';
 	if (n < 0)
@@ -34,7 +33,7 @@ void	ft_putnumber(char *buffer, long	n)
 	buffer[i] = '\0';
 }
 
-void ft_reverseprint(char *result, char *buffer)
+void	ft_reverseprint(char *result, char *buffer)
 {
 	int	length;
 	int	i;
@@ -50,6 +49,7 @@ char	*ft_itoa(int n)
 {
 	char	buffer[6498];
 	char	*result;
+
 	ft_putnumber(buffer, n);
 	result = malloc(sizeof(char) * (ft_strlen(buffer) + 1));
 	ft_reverseprint(result, buffer);
@@ -57,7 +57,7 @@ char	*ft_itoa(int n)
 	return (NULL);
 }
 
-int	main(void)
-{
-	ft_itoa(-2147483648);
-}
+// int	main(void)
+// {
+// 	ft_itoa(-2147483648);
+// }

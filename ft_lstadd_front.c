@@ -6,15 +6,15 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 21:27:47 by djin              #+#    #+#             */
-/*   Updated: 2023/05/06 23:04:37 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/08 12:53:51 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if(!lst || !new)
+	if (!lst || !new)
 		return ;
 	new -> next = *lst;
 	*lst = new;

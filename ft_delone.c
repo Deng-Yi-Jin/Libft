@@ -6,20 +6,20 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 11:16:44 by djin              #+#    #+#             */
-/*   Updated: 2023/05/08 11:21:56 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/08 12:45:32 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstdelone(t_list *lst, void (*del)(void *))
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	t_list	*prevnode;
 
 	prevnode = lst;
-	if(!prevnode)
+	if (!prevnode)
 		return ;
-	else if(prevnode)
+	else if (prevnode)
 	{
 		del(prevnode -> content);
 		free (prevnode);

@@ -6,13 +6,13 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 23:28:53 by djin              #+#    #+#             */
-/*   Updated: 2023/05/06 23:32:25 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/08 12:54:23 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
 	while (lst != 0 && lst -> next != 0)
 		lst = lst -> next;

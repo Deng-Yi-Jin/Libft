@@ -6,7 +6,7 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 10:19:49 by djin              #+#    #+#             */
-/*   Updated: 2023/05/03 18:41:22 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/08 12:56:50 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,13 +103,13 @@ char	**ft_split(char const *s, char c)
 //  	}
 //  }
 
-int	main()
-{
-	char	**result = ft_split("Can You Split At Every Sp ace", ' ');
-	int i = 0;
-	while(i < 7)
-	{
-		printf(i? ", %s" : "%s", result[i]);
-		i++;
-	}
-}
+// int	main(void)
+// {
+// 	char	**result = ft_split("Can You Split At Every Sp ace", ' ');
+// 	int i = 0;
+// 	while(i < 7)
+// 	{
+// 		printf(i? ", %s" : "%s", result[i]);
+// 		i++;
+// 	}
+// }

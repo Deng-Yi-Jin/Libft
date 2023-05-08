@@ -6,7 +6,7 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 17:32:48 by djin              #+#    #+#             */
-/*   Updated: 2023/05/06 22:54:56 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/08 12:57:43 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,10 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	return (size + ft_strlen(src));
 }
 
-int main(void)
-{
-    char dest[30] = "Hel";
-    char *src = "AAAAAA";
-	printf("%zu\n", ft_strlcat(dest, src, -2));
-	printf("%s\n", dest);
-}
+// int main(void)
+// {
+//     char dest[30] = "Hel";
+//     char *src = "AAAAAA";
+// 	printf("%zu\n", ft_strlcat(dest, src, -2));
+// 	printf("%s\n", dest);
+// }

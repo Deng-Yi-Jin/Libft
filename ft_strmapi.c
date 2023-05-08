@@ -6,15 +6,15 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 22:15:09 by djin              #+#    #+#             */
-/*   Updated: 2023/05/05 22:39:13 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/08 12:58:19 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int	i;
+	int		i;
 	char	*str;
 
 	i = 0;
@@ -34,7 +34,7 @@ char	any(unsigned int i, char c)
 		return (c - 32);
 	else if (c >= 'A' && c <= 'Z')
 		return (c + 32);
-	return c;
+	return (c);
 }
 
 int	main(void)

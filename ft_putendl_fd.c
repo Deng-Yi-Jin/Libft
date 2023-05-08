@@ -6,18 +6,18 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 20:09:43 by djin              #+#    #+#             */
-/*   Updated: 2023/05/06 20:19:53 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/08 12:56:17 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
 	int	i;
 
 	i = 0;
-	if(!s)
+	if (!s)
 		return ;
 	while (s[i])
 	{
@@ -25,5 +25,5 @@ void ft_putendl_fd(char *s, int fd)
 		i++;
 	}
 	s[i] = '\0';
-	write(fd , "\0", 1);
+	write(fd, "\0", 1);
 }

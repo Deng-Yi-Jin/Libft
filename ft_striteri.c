@@ -6,13 +6,13 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 22:39:48 by djin              #+#    #+#             */
-/*   Updated: 2023/05/05 22:49:15 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/08 12:57:25 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	int	i;
 
@@ -32,9 +32,9 @@ void	any(unsigned int i, char *c)
 		*c = *c + 32;
 }
 
-int	main(void)
-{
-	char str[] = "Hello";
-	ft_striteri(str, &any);
-	printf("%s", str);
-}
+// int	main(void)
+// {
+// 	char str[] = "Hello";
+// 	ft_striteri(str, &any);
+// 	printf("%s", str);
+// }

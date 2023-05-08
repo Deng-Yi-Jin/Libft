@@ -6,27 +6,27 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 11:32:12 by djin              #+#    #+#             */
-/*   Updated: 2023/05/08 11:58:59 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/08 12:55:22 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_if(temp, newnode, lst)
+void	ft_if(t_list *temp, t_list *newnode, t_list *lst)
 {
-		if(temp == 0)
-		{
-			lst = newnode;
-			temp = newnode;
-		}
-		else
-		{
-			temp -> next = newnode;
-			temp = newnode;
-		}
+	if (temp == 0)
+	{
+		lst = newnode;
+		temp = newnode;
+	}
+	else
+	{
+		temp -> next = newnode;
+		temp = newnode;
+	}
 }
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*pnode;
 	t_list	*temp;
