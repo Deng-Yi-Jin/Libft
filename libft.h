@@ -6,7 +6,7 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 15:38:20 by djin              #+#    #+#             */
-/*   Updated: 2023/05/06 23:34:31 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/08 13:13:49 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void		*ft_memset(void *dest, int ch, size_t count);
 
 void		ft_putchar_fd(char c, int fd);
 
-void		ft_putnbr_fd(int n);
+void		ft_putnbr_fd(int n, int fd);
 
 void		ft_putstr_fd(char *s, int fd);
 
