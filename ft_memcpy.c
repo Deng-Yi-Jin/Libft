@@ -6,7 +6,7 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 21:33:26 by djin              #+#    #+#             */
-/*   Updated: 2023/05/09 13:50:19 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/09 18:14:55 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t count)
 {
-	unsigned int	i;
+	size_t			i;
 	char			*char_dest;
 	char			*char_src;
 
 	char_dest = (char *)dest;
 	char_src = (char *)src;
+	if (!dest && !src)
+		return (NULL);
 	i = 0;
 	while (i < count)
 	{

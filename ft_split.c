@@ -6,7 +6,7 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 10:19:49 by djin              #+#    #+#             */
-/*   Updated: 2023/05/09 12:17:17 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/09 18:43:10 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,8 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	str = (char *)s;
 	arr = (char **)malloc((count_string(str, c) + 1) * sizeof(char *));
+	if (!arr)
+		return (NULL);
 	while (*str)
 	{
 		while (*str && check_seperator(*str, c))

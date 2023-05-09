@@ -6,7 +6,7 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 16:58:38 by djin              #+#    #+#             */
-/*   Updated: 2023/05/08 19:00:18 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/09 18:33:31 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,9 @@ int	ft_memcmp(const void *str1, const void *str2, size_t count)
 	unsigned char	*s1;
 	unsigned char	*s2;
 
-	if (!str1 || !str2 || !count)
-		return (0);
 	s1 = ((unsigned char *)str1);
 	s2 = ((unsigned char *)str2);
 	i = 0;
-	if (count == 0)
-		return (0);
 	while (i < (count))
 	{
 		if (s1[i] != s2[i])

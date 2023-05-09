@@ -6,7 +6,7 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 22:42:01 by djin              #+#    #+#             */
-/*   Updated: 2023/05/09 13:31:45 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/09 18:25:08 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,28 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t count)
 {
-	char			*char_dest;
-	char			*char_src;
+	unsigned char	*char_dest;
+	unsigned char	*char_src;
+	size_t			i;
 
-	char_dest = (char *)dest;
-	char_src = (char *)src;
-	while (count--)
-		char_dest[count] = char_src[count];
+	char_dest = (unsigned char *)dest;
+	char_src = (unsigned char *)src;
+	i = 0;
+	if ((!char_dest && !char_src))
+		return (NULL);
+	if (char_dest > char_src)
+	{
+		while (count--)
+			char_dest[count] = char_src[count];
+	}
+	else
+	{
+		while (i < count)
+		{
+			char_dest[i] = char_src[i];
+			i++;
+		}
+	}
 	return (dest);
 }
 

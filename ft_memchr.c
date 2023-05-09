@@ -6,7 +6,7 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 15:45:43 by djin              #+#    #+#             */
-/*   Updated: 2023/05/08 14:57:30 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/09 18:30:03 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 void	*ft_memchr(void *ptr, int ch, size_t count)
 {
-	unsigned int		i;
-	unsigned char		*char_ptr;
+	unsigned int	i;
+	char			*char_ptr;
+	char			char_c;
 
-	char_ptr = ((unsigned char *)ptr);
+	char_ptr = ((char *)ptr);
+	char_c = (char)ch;
 	i = 0;
-	if (!char_ptr)
-		return (NULL);
 	while (i < count)
 	{
-		if (char_ptr[i] == (char)ch)
+		if (char_ptr[i] == char_c)
 			return ((void *)ptr + i);
 		i++;
 	}

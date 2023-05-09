@@ -6,7 +6,7 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 14:08:48 by djin              #+#    #+#             */
-/*   Updated: 2023/04/30 21:58:05 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/09 18:36:29 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_strncmp(const char *str1, const char *str2, unsigned int n)
 			break ;
 		i++;
 	}
-	return (str1[i] - str2[i]);
+	return ((unsigned char)str1[i] - (unsigned char)str2[i]);
 }
 
 /*int	main(void)

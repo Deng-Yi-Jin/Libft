@@ -6,7 +6,7 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 19:58:29 by djin              #+#    #+#             */
-/*   Updated: 2023/05/08 18:58:52 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/09 18:40:22 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ void	*ft_calloc(size_t num, size_t size)
 	if (num == SIZE_MAX || size == SIZE_MAX)
 		return (NULL);
 	ptr = (char *)malloc (num * size);
-	while (i < size)
+	if (!ptr)
+		return (NULL);
+	while (i < (size * num))
 	{
 		*((char *)ptr + i) = 0;
 		i++;

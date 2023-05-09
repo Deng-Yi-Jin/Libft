@@ -6,13 +6,13 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 11:30:05 by djin              #+#    #+#             */
-/*   Updated: 2023/04/30 11:39:34 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/09 18:34:55 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_tolower(char u)
+int	ft_tolower(int u)
 {
 	if (u >= 'A' && u <= 'Z')
 		u = u + 32;

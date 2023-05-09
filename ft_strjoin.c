@@ -6,7 +6,7 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 12:04:22 by djin              #+#    #+#             */
-/*   Updated: 2023/05/08 14:21:17 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/09 18:41:29 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		j;
 	char	*str;
 
-	str = malloc(sizeof(char) * (ft_strlen(s1) + 1));
 	if (!s1 || !s2)
 		return (NULL);
+	str = malloc(sizeof(char) * (ft_strlen(s1) + 1));
 	if (!str)
 		return (NULL);
 	i = 0;

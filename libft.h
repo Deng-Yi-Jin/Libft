@@ -6,7 +6,7 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 15:38:20 by djin              #+#    #+#             */
-/*   Updated: 2023/05/08 23:14:04 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/09 18:35:04 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ char		*ft_strtrim(char const *s1, char const *set);
 
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 
-char		ft_tolower(char u);
+int			ft_tolower(int u);
 
 int			ft_toupper(int c);
 

@@ -6,7 +6,7 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 12:34:44 by djin              #+#    #+#             */
-/*   Updated: 2023/05/08 20:34:58 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/09 18:42:22 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	i;
 	size_t	length;
 
-	length = ft_strlen(s1);
-	i = 0;
 	if (!set || !s1)
 		return (NULL);
+	length = ft_strlen(s1);
+	i = 0;
 	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;
 	while (s1[length - 1] && ft_strchr(set, s1[length - 1]))
