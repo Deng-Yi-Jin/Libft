@@ -6,15 +6,15 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 10:19:49 by djin              #+#    #+#             */
-/*   Updated: 2023/05/09 01:26:21 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/09 12:17:17 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	check_seperator(char check, char b)
+static int	check_seperator(char a, char check)
 {
-	if (check == b)
+	if (a == check)
 		return (1);
 	return (0);
 }
@@ -48,12 +48,12 @@ static int	ft_len(char *str, char c)
 
 static char	*print_word(char *str, char c)
 {
-	int		i;
 	int		len;
+	int		i;
 	char	*word;
 
-	i = 0;
 	len = ft_len(str, c);
+	i = 0;
 	word = (char *)malloc((len + 1) * sizeof(char));
 	while (i < len)
 	{
@@ -66,9 +66,9 @@ static char	*print_word(char *str, char c)
 
 char	**ft_split(char const *s, char c)
 {
+	int		i;
 	char	*str;
 	char	**arr;
-	int		i;
 
 	if (!s)
 		return (NULL);
