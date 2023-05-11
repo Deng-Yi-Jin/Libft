@@ -12,7 +12,8 @@ SRCS_BONUS	=	ft_lstdelone.c ft_lstiter.c ft_lstmap.c \
 				ft_lstnew.c ft_lstadd_back.c ft_lstadd_front.c \
 				ft_lstclear.c ft_lstsize.c ft_lstlast.c \
 
-CC			= gcc
+GCC			= cc
+CFLAGS		= -Wall -Werror -Wextra
 NAME		= libft.a
 ARRC		= ar rc
 RM			= rm -f
