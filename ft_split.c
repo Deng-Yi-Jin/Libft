@@ -6,13 +6,13 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 10:19:49 by djin              #+#    #+#             */
-/*   Updated: 2023/05/09 18:43:10 by djin             ###   ########.fr       */
+/*   Updated: 2023/05/10 14:04:08 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	check_seperator(char a, char check)
+static int	check_space(char a, char check)
 {
 	if (a == check)
 		return (1);
