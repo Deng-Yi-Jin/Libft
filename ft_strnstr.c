@@ -6,7 +6,7 @@
 /*   By: djin <djin@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 17:23:57 by djin              #+#    #+#             */
-/*   Updated: 2023/05/08 19:01:20 by djin             ###   ########.fr       */
+/*   Updated: 2023/07/23 20:22:26 by djin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,29 @@ char	*ft_strnstr(const char	*str, const char *to_find, size_t len)
 	return (NULL);
 }
 
+// int map_check(char *s)
+// {
+// 	int len = ft_strlen(s) - 1;
+
+// 	if (s[len] == 'r' && s[len - 1] == 'e'
+// 		&& s[len - 2] == 'b' && s[len - 3] == '.')
+// 	{
+// 		return (1);
+// 	}
+// 	return (0);
+// }
+
+// int main(int ac, char **av)
+// {
+// 	if (map_check(av[1]) == 1)
+// 	{
+
+// 	}
+// 	else
+// 	{
+
+// 	}
+// }
 /*int	main(void)
 {
 	char	str[] = "th the nuts";
